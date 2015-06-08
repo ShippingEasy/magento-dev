@@ -1,4 +1,4 @@
-## WTF
+## Magento-Dev
 
 This is nginx fronting Magento talking to MySQL all in a docker-compose cluster.
 nginx is configured to forward all requests from 80 and 443 to magento on port 8080,
