@@ -23,12 +23,12 @@ In terminal 2 (after magento & mysql start):
 
 Add the following to your /etc/hosts file
 ```
-127.0.0.1    magento-dev
+127.0.0.1    magento.dev
 ```
 
 Point your browser to the Magento store
 ```
-magento-dev/magento
+http://magento.dev/admin
 ```
 
 Configure the Magento instance
@@ -38,7 +38,7 @@ Configure the Magento instance
   1. Database user should be ```magento```
   1. Database password should be ```magento```
 2. In 'Web access options'
-  1. Enter a Base URL of ```https://magento-dev```.
+  1. Enter a Base URL of ```https://magento.dev```.
   1. Check "Skip Base URL Validation Before Next Step"
 
 Otherwise select defaults and/or fill out as you like.  More help can be found at http://www.magentocommerce.com/knowledge-base/entry/magento-installation-cheat-sheet.
