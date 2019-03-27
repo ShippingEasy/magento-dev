@@ -38,7 +38,7 @@ Configure the Magento instance
   1. Database user should be ```magento```
   1. Database password should be ```magento```
 2. In 'Web access options'
-  1. Enter a Base URL of ```https://magento.dev```.
+  1. Enter a Base URL of ```http://magento.dev```.
   1. Check "Skip Base URL Validation Before Next Step"
 
 Otherwise select defaults and/or fill out as you like.  More help can be found at http://www.magentocommerce.com/knowledge-base/entry/magento-installation-cheat-sheet.
