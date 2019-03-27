@@ -50,3 +50,11 @@ Follow the guide [here] (https://support.shippingeasy.com/hc/en-us/articles/2030
 
 ## Troubleshooting
 Have seen a few issues related to redirects.  If so, look at terminal output to see the URL being accessed, then try to curl against it with the -v option to see what is going on.
+
+## Generating Sample Orders
+To generate more orders:
+
+1. Log into the magento docker container w/ `docker exec -it magento-dev_magento_1 /bin/bash`
+2. Run the generateSampleOrders.php script w/ `php ./generateSampleOrders.php`
+
+That script should generate 100 new orders to work with.
