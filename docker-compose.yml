@@ -8,7 +8,6 @@ nginx:
     - ./nginx.crt:/etc/nginx/ssl/nginx.crt:ro
     - ./nginx.key:/etc/nginx/ssl/nginx.key:ro
     - ./logs:/var/log/nginx
-    - ./generateSampleOrders.php:/var/www/html:ro
   links:
     - magento
 mysql:
@@ -21,5 +20,7 @@ magento:
     - 8080:80
   links:
     - mysql
+  volumes:
+  - ./generateSampleOrders.php:/var/www/html/generateSampleOrders.php:ro
   env_file:
     - env
