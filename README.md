@@ -31,7 +31,13 @@ Point your browser to the Magento store
 http://magento.dev/admin
 ```
 
-Configure the Magento instance
+Login with the `MAGENTO_ADMIN_USERNAME` & `MAGENTO_ADMIN_PASSWORD` values in the `env` file
+
+## Alternative manual setup procedure
+
+The store can be setup manually by removing the `install-magento` line in the `setup` file. In that case, pointing your browser to the Magento store at `http://magento.dev/admin` will start the setup process.
+
+To configure the Magento instance:
 
 1. In 'Database Connection'
   1. Database host should be ```mysql```
@@ -57,4 +63,4 @@ To generate more orders:
 1. Log into the magento docker container w/ `docker exec -it magento-dev_magento_1 /bin/bash`
 2. Run the generateSampleOrders.php script w/ `php ./generateSampleOrders.php`
 
-That script should generate 100 new orders to work with.
+That script should generate 100 new, recently placed orders to work with.
