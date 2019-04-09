@@ -3,3 +3,6 @@ echo 'Installing sample data'
 docker-compose run magento /usr/local/bin/install-sampledata
 docker-compose run mysql /usr/bin/mysql --user=magento --password=magento magento --execute="update core_config_data set value=0 where path = 'web/cookie/cookie_httponly';"
 docker-compose run magento rm -Rf var/cache/mage--*
+
+echo 'Installing Magento'
+docker exec -it magento-dev_magento_1 install-magento

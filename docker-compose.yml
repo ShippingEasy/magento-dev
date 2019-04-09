@@ -4,10 +4,10 @@ nginx:
     - 80:80
     - 443:443
   volumes:
-    - nginx.conf:/etc/nginx/nginx.conf:ro
-    - nginx.crt:/etc/nginx/ssl/nginx.crt:ro
-    - nginx.key:/etc/nginx/ssl/nginx.key:ro
-    - logs:/var/log/nginx
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx.crt:/etc/nginx/ssl/nginx.crt:ro
+    - ./nginx.key:/etc/nginx/ssl/nginx.key:ro
+    - ./logs:/var/log/nginx
   links:
     - magento
 mysql:
@@ -20,5 +20,12 @@ magento:
     - 8080:80
   links:
     - mysql
+  volumes:
+  - ./generateSampleOrders.php:/var/www/html/generateSampleOrders.php:ro
+  # This "installs" the local copy of our Magento plugin for local testing
+  - ../magento-plugin/app/code/community/Shippingeasy:/var/www/html/app/code/community/Shippingeasy:ro
+  - ../magento-plugin/app/design/adminhtml/default/layout/default/shippingeasyapi.xml:/var/www/html/app/design/adminhtml/default/default/layout/shippingeasyapi.xml:ro
+  - ../magento-plugin/app/etc/modules/Shippingeasy_Api.xml:/var/www/html/app/etc/modules/Shippingeasy_Api.xml:ro
+  - ../magento-plugin/skin/adminhtml/default/default/shippingeasyapi:/var/www/html/skin/adminhtml/default/default/shippingeasyapi:ro
   env_file:
     - env
