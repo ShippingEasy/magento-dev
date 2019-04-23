@@ -24,7 +24,7 @@ magento:
   - ./generateSampleOrders.php:/var/www/html/generateSampleOrders.php:ro
   # This "installs" the local copy of our Magento plugin for local testing
   - ../magento-plugin/app/code/community/Shippingeasy:/var/www/html/app/code/community/Shippingeasy:ro
-  - ../magento-plugin/app/design/adminhtml/default/layout/default/shippingeasyapi.xml:/var/www/html/app/design/adminhtml/default/default/layout/shippingeasyapi.xml:ro
+  - ../magento-plugin/app/design/adminhtml/default/default/layout/shippingeasyapi.xml:/var/www/html/app/design/adminhtml/default/default/layout/shippingeasyapi.xml:ro
   - ../magento-plugin/app/etc/modules/Shippingeasy_Api.xml:/var/www/html/app/etc/modules/Shippingeasy_Api.xml:ro
   - ../magento-plugin/skin/adminhtml/default/default/shippingeasyapi:/var/www/html/skin/adminhtml/default/default/shippingeasyapi:ro
   env_file:
